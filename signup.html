@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name ="description" content ="Welcome to the homepage! Look at our awesome server content and more.">
+    <meta name ="viewpoint" content = "width=device-width, inital-scale=1.0">
+    <title>Welcome to the StrellaMC Homepage!</title>
+    <link href="Styles/signup.css" rel="StyleSheet" type="text/css">
+    <link rel="StyleSheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <h1 class ="Title">StrellaMC</h1>
+    <nav>
+        <ul class = "Navigation">
+            <li><a href = "About.html">About</a></li>
+            <li><a href = "Help.html">Help</a></li>
+            <li><a href = "Vote.html">Vote</a></li>
+            <li><a href = "Store.html">Store</a></li>
+            <li><a href = "Contact.html"><button>Contact</button></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class = "form-box" action="Insert.php" method="POST">
+        <h2>Create Account:</h2>
+        <div class="input-box">
+            <i class="fa fa-user"></i>
+            <input type="Username" placeholder="Username" name="Username" required>
+        </div>
+        <div class="input-box">
+            <i class ="fa fa-key"></i>
+            <input type ="password" placeholder="Password" id="PasswordToggle" name="Password" required>
+            <span class = "eye" onclick = "Open_Close_Eye()">
+                        <i id="open" class="fa fa-eye"></i>
+                        <i id="close" class="fa fa-eye-slash"></i>
+                    </span>
+        </div>
+        <div class="input-box">
+            <i class ="fa fa-key"></i>
+            <input type ="password" placeholder="Confirm Password" id="ConfirmPassword" >
+
+        </div>
+        <span class = "PassCheck">
+                <p class = "fail" id="onfail">Passwords do not match!</p>
+        </span>
+        <button type ="button" class = "Sign-up" onclick = "CheckPassword()">Sign up</button>
+    </div>
+    <script>
+        function Open_Close_Eye(){
+            let Toggle = document.getElementById("PasswordToggle");
+            let eyeO = document.getElementById("open");
+            let eyeC = document.getElementById("close");
+            if(Toggle.type === 'password'){
+                Toggle.type = "text";
+                eyeO.style.display = "block";
+                eyeC.style.display = "none";
+            }
+            else{
+                Toggle.type = "password";
+                eyeO.style.display = "none";
+                eyeC.style.display = "block";
+            }
+        }
+        function CheckPassword(){
+            var passed = false;
+            let Pass1 = document.getElementById("PasswordToggle").value;
+            let Pass2 = document.getElementById("ConfirmPassword").value;
+            let failC = document.getElementById("onfail");
+                if (Pass1 === Pass2) {
+                    failC.style.display = "none";
+                    openDatabase()
+                }
+                else {
+                    failC.style.display = "block";
+                }
+        }
+    </script>
+</main>
+</body>
+</html>

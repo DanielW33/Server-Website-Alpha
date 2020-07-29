@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name ="description" content ="Welcome to the homepage! Look at our awesome server content and more.">
+    <meta name ="viewpoint" content = "width=device-width, inital-scale=1.0">
+    <title>Welcome to the StrellaMC Homepage!</title>
+    <link href="Styles/Contactstyles.css" rel="StyleSheet" type="text/css">
+</head>
+<header>
+    <h1 class ="Title" onclick="on_Title_Click()">StrellaMC</h1>
+    <nav>
+        <ul class = "Navigation">
+            <li><a class = "anav" href = "About.html">About</a></li>
+            <li><a class = "anav" href = "Help.html">Help</a></li>
+            <li><a class = "anav" href = "Vote.html">Vote</a></li>
+            <li><a class = "anav" href = "https://strellamc.tebex.io/">Store</a></li>
+            <li><a class = "anav" href = "AdminPanel.php">Admin Panel</a></li>
+            <li><a class = "anav" href = "Contact.html"><button>Contact</button></a></li>
+        </ul>
+    </nav>
+    <script>
+        function on_Title_Click(){
+            open("index.html", '_self')
+        }
+    </script>
+</header>
+<div class="Contact" style="background-color: #282828; color: white; font-size: 15px">
+    <form style="background-color: #282828" action="Insert_Db.php" method="POST">
+
+        <label style="background-color: #282828; color: white; font-size: 20px" for="Username">First Name</label>
+        <input type="text" id="Username" name="Username" placeholder="Your Minecraft Username..">
+
+        <label style="background-color: #282828; color: white; font-size: 20px" for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email address, This is how you will be contacted if you are not ingame.">
+
+        <label style="background-color: #282828; font-size: 20px" for="Content">Content</label>
+        <textarea id="Content" name="Content" placeholder="Write your message here, Maximum of 500 characters.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit" id="Send">
+
+    </form>
+</div>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name ="description" content ="Welcome to the homepage! Look at our awesome server content and more.">
+        <meta name ="viewpoint" content = "width=device-width, inital-scale=1.0">
+       <title>Welcome to the StrellaMC Homepage!</title>
+        <link href="Styles/indexstyles.css" rel="StyleSheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1 class ="Title" onclick="on_Title_Click()">StrellaMC</h1>
+            <nav>
+                <ul class = "Navigation">
+                    <li><a class = "anav" href = "About.html">About</a></li>
+                    <li><a class = "anav" href = "Help.html">Help</a></li>
+                    <li><a class = "anav" href = "Vote.html">Vote</a></li>
+                    <li><a class = "anav" href = "https://strellamc.tebex.io/">Store</a></li>
+                    <li><a class = "anav" href = "Contact.html"><button>Contact</button></a></li>
+                </ul>
+            </nav>
+            <script>
+                function on_Title_Click(){
+                    open("index.html", '_self')
+                }
+            </script>
+        </header>
+        <div class = "img"></div>
+
+        <h3 class  = "SubTitle">Server Announcements:</h3>
+        <div class = rows>
+                <main class = left></main>
+                <main class = middle>
+                    <h2 class = "Subject">Hello and Welcome to StrellaMC!!</h2>
+                    <p>Join us on discord or on Minecraft to get started in our community !</p>
+                    <p style="padding-top: 0;">Minecraft Server IP: play.StrellaMc.com</p>
+                    <img class ="Dimage" src="Files/Discord.jpeg" alt="No Image found Exception" onclick="on_Discord_Click()">
+                </main>
+                <main class = right><iframe src  ="https://discordapp.com/widget?id=481979664903176203&theme=dark" width="90%" height="500" allowtransparency="true" frameborder="0"></iframe></main>
+        </div>
+    </body>
+    <script>
+        function on_Discord_Click(){
+            open("https://discord.gg/yyTZCAZ", '_self')
+
+        }
+    </script>
+    <footer>
+        <h3 class = Foot>Contact us at:</h3>
+        <p class = Foota>StrellaMC.Contact@Gmail.com</p>
+    </footer>
+</html>
