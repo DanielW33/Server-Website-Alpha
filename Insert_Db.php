@@ -4,8 +4,8 @@
     $Content = $_POST['Content'];
     if(!empty($Username) && !empty($Email) && !empty($Content)){
         $host = "localhost";
-        $dbUsername = "strellam_MuchDan";
-        $dbPassword = "00003582Dan";
+        $dbUsername = "********";
+        $dbPassword = "*******";
         $dbname = "strellam_Contact";
         $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
         if($conn->connect_errno){
